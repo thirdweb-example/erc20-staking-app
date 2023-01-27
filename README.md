@@ -1,4 +1,4 @@
-# erc20-staking-app
+# ERC20 Staking App
 
 Allow users to stake their ERC20 tokens in return for more/other ERC20 tokens!
 
