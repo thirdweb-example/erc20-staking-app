@@ -13,7 +13,7 @@ import { ethers } from "ethers";
 import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 
-const stakingContractAddress = "0x942cE010A29D4bF9fe3d5cc9610C6ba536C516EA";
+const stakingContractAddress = "0x9fB6514bc5048C92c87f4d25371325758f30592A";
 
 export default function Home() {
   const address = useAddress();
@@ -27,7 +27,10 @@ export default function Home() {
 
   // Get contract data from staking contract
   const { data: rewardTokenAddress } = useContractRead(staking, "rewardToken");
-  const { data: stakingTokenAddress } = useContractRead(staking, "token");
+  const { data: stakingTokenAddress } = useContractRead(
+    staking,
+    "stakingToken"
+  );
 
   // Initialize token contracts
   const { contract: stakingToken, isLoading: isStakingTokenLoading } =
