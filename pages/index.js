@@ -27,7 +27,10 @@ export default function Home() {
 
   // Get contract data from staking contract
   const { data: rewardTokenAddress } = useContractRead(staking, "rewardToken");
-  const { data: stakingTokenAddress } = useContractRead(staking, "token");
+  const { data: stakingTokenAddress } = useContractRead(
+    staking,
+    "stakingToken"
+  );
 
   // Initialize token contracts
   const { contract: stakingToken, isLoading: isStakingTokenLoading } =
