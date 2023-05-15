@@ -12,8 +12,7 @@ import { ethers } from "ethers";
 
 import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
-
-const stakingContractAddress = "0x9fB6514bc5048C92c87f4d25371325758f30592A";
+import { stakingContractAddress } from "../const/yourDetails";
 
 export default function Home() {
   const address = useAddress();
