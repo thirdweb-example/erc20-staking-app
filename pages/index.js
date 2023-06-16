@@ -48,7 +48,7 @@ export default function Home() {
     data: stakeInfo,
     refetch: refetchStakingInfo,
     isLoading: isStakeInfoLoading,
-  } = useContractRead(staking, "getStakeInfo", address || "0");
+  } = useContractRead(staking, "getStakeInfo", [address || "0"]);
 
   useEffect(() => {
     setInterval(() => {
@@ -93,7 +93,7 @@ export default function Home() {
               );
               await contract.call(
                 "stake",
-                ethers.utils.parseEther(amountToStake)
+                [ethers.utils.parseEther(amountToStake)]
               );
               alert("Tokens staked successfully!");
             }}
@@ -107,7 +107,7 @@ export default function Home() {
             action={async (contract) => {
               await contract.call(
                 "withdraw",
-                ethers.utils.parseEther(amountToStake)
+                [ethers.utils.parseEther(amountToStake)]
               );
               alert("Tokens unstaked successfully!");
             }}
@@ -119,7 +119,7 @@ export default function Home() {
             className={styles.button}
             contractAddress={stakingContractAddress}
             action={async (contract) => {
-              await contract.call("claimRewards");
+              await contract.call("claimRewards", []);
               alert("Rewards claimed successfully!");
             }}
           >
