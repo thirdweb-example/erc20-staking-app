@@ -6,36 +6,59 @@ In this repo, we are using [thirdweb ContractKit](https://thirdweb.com/contractk
 
 You can read [the guide associated to this repo](https://blog.thirdweb.com/build-an-erc20-staking-smart-contract-web-application/).
 
-## How to use
+## Installation
 
-Clone this repo to have this repo locally.
-
-The `staking-contract` directory holds the contracts the contract that we are using in this guide. You can navigate to the folder and run the following command to install the dependencies
+Install via [thirdweb create](https://portal.thirdweb.com/cli/create)
 
 ```bash
-yarn install
+  npx thirdweb create --template erc20-staking-app
 ```
 
-The root directory holds the frontend code. You run the following command to install the dependencies
+## Run Locally
+
+Install dependencies
 
 ```bash
-yarn install
+  # npm
+  npm install
+
+  # yarn
+  yarn install
 ```
 
-### Deploying the contract
-
-You can deploy the contract using the following command
+Start the server
 
 ```bash
-npx thirdweb@latest deploy
+  # npm
+  npm run start
+
+  # yarn
+  yarn start
 ```
 
-This will upload the contract metadata to IPFS and will open browser to deploy the contract using the connected wallet.
+## Environment Variables
 
-### Deploying the frontend
+To run this project, you will need to add environment variables. Check the `.env.example` file for all the environment variables required and add it to `.env.local` file or set them up on your hosting provider.
 
-You can use the following command to quickly deploy the frontend to IPFS:
+## Deployment
+
+Deploy a copy of your application to IPFS using the following command:
 
 ```bash
-yarn deploy
+  yarn deploy
 ```
+
+## Additional Resources
+
+- [Documentation](https://portal.thirdweb.com)
+- [Templates](https://thirdweb.com/templates)
+- [Video Tutorials](https://youtube.com/thirdweb_)
+- [Blog](https://blog.thirdweb.com)
+
+## Contributing
+
+Contributions and [feedback](https://feedback.thirdweb.com) are always welcome! Please check our [open source page](https://thirdweb.com/open-source) for more information.
+
+## Need help?
+
+For help, join the [discord](https://discord.gg/thirdweb) or visit our [support page](https://support.thirdweb.com).
